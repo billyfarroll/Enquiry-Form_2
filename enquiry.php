@@ -28,7 +28,7 @@ ini_set("sendmail_from", $email_from);
 $sent = mail($email_to, $email_subject, $message, $headers, "-f" .$email_from);
 if ($sent)
 {
-header("Location: http://www.strawberryproofing.co.uk/newhaven_marina/thank_you.html");
+header("Location: http://www.strawberryproofing.co.uk/newhaven_marina/thank_you.html");  // Takes you to the thank you page
 } else {
 echo "There has been an error sending your query. Please try later.";
 }
