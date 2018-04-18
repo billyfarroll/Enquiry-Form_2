@@ -1,32 +1,28 @@
-<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
-
-<body style="background-color: black;">
-  
-  <!-- FORM -->
-<div class="container">  
-  <form id="contact" action="" method="post">
+<!-- FORM -->
+<div class="container hello">  
+  <form id="contact" action="enquiry.php" method="post">
     <h3>Get in Touch</h3>
     <h4>Thank you for your interest in Newhaven Marina Please use the contact us form below to get in touch. <br/>
       <br>
 We aim to have an initial response to you within 24 hours, in most cases much less.</h4>
     
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required>
+      <input placeholder="Your name" type="text" name="name" id="name" tabindex="1" required>
     </fieldset>
-    <!-- NOTICE required tag makes user have to fill out form -->
+    
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <input placeholder="Your Email Address" type="email" name="email" id="email" tabindex="2" required>
     </fieldset>
-    <!-- NOTICE required tag makes user have to fill out form -->
+    
     <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+      <input placeholder="Your Phone Number" type="text" name="tel" id="tel" tabindex="3" required>
     </fieldset>
-    <!-- NOTICE required tag makes user have to fill out form -->
+    
     <fieldset>
-       <textarea placeholder="What would you like to know?" tabindex="4" required>
+       <textarea placeholder="What would you like to know?" type="text" name="comment" id="comment" tabindex="4" required>
         </textarea>
       </fieldset>
-    <!-- NOTICE required tag makes user have to fill out form -->
+    
     <fieldset>
        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit
       </button>
@@ -35,5 +31,3 @@ We aim to have an initial response to you within 24 hours, in most cases much le
   </form>
 </div>
   <!-- FORM -->
-
-</body>
