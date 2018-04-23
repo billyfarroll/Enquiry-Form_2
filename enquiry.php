@@ -16,8 +16,8 @@ $email_from = "billy@strawberrymarketing.com"; // This email address has to be t
 $message = $_POST["message"];
 $email_subject = "Newhaven Query";
 $headers =
-"From: $email_from .\n";
-"Reply-To: $email_from .\n";
+"From: $email .\n"; // Although the email is still being sent by one that's authorised by the server, we've changed in the email header display what email address to show in the message sent
+"Reply-To: $email .\n";
 $message = 
 "Name: ". $name . 
 "\r\nTelephone Number: " . $tel . 
@@ -28,7 +28,7 @@ ini_set("sendmail_from", $email_from);
 $sent = mail($email_to, $email_subject, $message, $headers, "-f" .$email_from);
 if ($sent)
 {
-header("Location: http://www.strawberryproofing.co.uk/newhaven_marina/thank_you.html");  // Takes you to the thank you page
+header("Location: http://www.strawberryproofing.co.uk/newhaven_marina/thank_you.html");
 } else {
 echo "There has been an error sending your query. Please try later.";
 }
@@ -48,9 +48,13 @@ function show_error($myError)
 ?>
 
 
+<?php echo $myError; ?>
 
 
-
+<?php
+exit();
+}
+?>
 
 
 <?php echo $myError; ?>
